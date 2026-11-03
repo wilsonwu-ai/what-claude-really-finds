@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" font-family="-apple-system, system-ui, Helvetica, Arial, sans-serif">
+  <title>What a read-only audit found on my Mac</title>
+  <rect width="1200" height="675" fill="#0f172a"/>
+  <text x="60" y="88" fill="#f8fafc" font-size="44" font-weight="700">What a read-only audit really found on my Mac</text>
+  <text x="60" y="132" fill="#94a3b8" font-size="24">332 commands. Every number below has the command that produced it.</text>
+
+  <g>
+    <rect x="60" y="175" width="520" height="190" rx="18" fill="#1e293b"/>
+    <text x="90" y="262" fill="#4ade80" font-size="76" font-weight="800">253 GB</text>
+    <text x="90" y="312" fill="#e2e8f0" font-size="25">of caches that rebuild themselves</text>
+    <text x="90" y="344" fill="#94a3b8" font-size="20">213 GB of it in one Python package cache</text>
+  </g>
+  <g>
+    <rect x="620" y="175" width="520" height="190" rx="18" fill="#1e293b"/>
+    <text x="650" y="262" fill="#fbbf24" font-size="76" font-weight="800">17</text>
+    <text x="650" y="312" fill="#e2e8f0" font-size="25">spare copies of Chromium</text>
+    <text x="650" y="344" fill="#94a3b8" font-size="20">left behind by browser test tools</text>
+  </g>
+  <g>
+    <rect x="60" y="395" width="520" height="190" rx="18" fill="#1e293b"/>
+    <text x="90" y="482" fill="#f87171" font-size="76" font-weight="800">10 of 16</text>
+    <text x="90" y="532" fill="#e2e8f0" font-size="25">desktop apps on an unpatched engine</text>
+    <text x="90" y="564" fill="#94a3b8" font-size="20">Electron majors Electron itself no longer patches</text>
+  </g>
+  <g>
+    <rect x="620" y="395" width="520" height="190" rx="18" fill="#1e293b"/>
+    <text x="650" y="482" fill="#f87171" font-size="76" font-weight="800">Chrome 102</text>
+    <text x="650" y="532" fill="#e2e8f0" font-size="25">the oldest engine, from 2022</text>
+    <text x="650" y="564" fill="#94a3b8" font-size="20">still inside an app I use</text>
+  </g>
+  <text x="60" y="636" fill="#64748b" font-size="21">Free and open source: github.com/wilsonwu-ai/what-claude-really-finds</text>
+</svg>

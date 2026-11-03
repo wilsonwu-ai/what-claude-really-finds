@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif">
+  <title>How the read-only guard decides</title>
+  <desc>Flowchart: Claude asks to run a command. The guard checks if the audit lock is on. If not, the command runs normally. If so, the command is split and unwrapped, and every piece must be on the read-only list. If yes it runs and its output becomes evidence. If no it is blocked with exit code 2 and a reason. The report lists findings with the command for each, and you decide.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e293b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="#f8fafc"/>
+
+  <!-- connectors -->
+  <g stroke="#1e293b" stroke-width="3" fill="none" marker-end="url(#arr)">
+    <line x1="300" y1="110" x2="388" y2="110"/>
+    <line x1="650" y1="110" x2="798" y2="110"/>
+    <line x1="520" y1="180" x2="520" y2="228"/>
+    <line x1="520" y1="290" x2="520" y2="318"/>
+    <line x1="670" y1="395" x2="778" y2="395"/>
+    <line x1="370" y1="395" x2="302" y2="395"/>
+    <polyline points="170,430 170,530 338,530"/>
+    <polyline points="970,430 970,530 702,530"/>
+    <line x1="520" y1="560" x2="520" y2="594"/>
+  </g>
+
+  <!-- start -->
+  <rect x="40" y="70" width="260" height="80" rx="14" fill="#e2e8f0" stroke="#1e293b" stroke-width="3"/>
+  <text x="170" y="105" text-anchor="middle" font-size="22" fill="#1e293b">Claude asks to</text>
+  <text x="170" y="133" text-anchor="middle" font-size="22" fill="#1e293b">run a command</text>
+
+  <!-- lock decision -->
+  <polygon points="520,40 650,110 520,180 390,110" fill="#e2e8f0" stroke="#1e293b" stroke-width="3"/>
+  <text x="520" y="105" text-anchor="middle" font-size="21" font-weight="600" fill="#1e293b">Guard: is</text>
+  <text x="520" y="131" text-anchor="middle" font-size="21" font-weight="600" fill="#1e293b">the lock on?</text>
+  <text x="720" y="98" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">no</text>
+  <text x="548" y="212" font-size="22" font-weight="700" fill="#1e293b">yes</text>
+
+  <!-- runs normally -->
+  <rect x="800" y="70" width="360" height="80" rx="14" fill="#dcfce7" stroke="#15803d" stroke-width="3"/>
+  <text x="980" y="119" text-anchor="middle" font-size="22" fill="#15803d" font-weight="600">Runs normally</text>
+
+  <!-- split and unwrap -->
+  <rect x="390" y="230" width="260" height="60" rx="14" fill="#e2e8f0" stroke="#1e293b" stroke-width="3"/>
+  <text x="520" y="268" text-anchor="middle" font-size="22" fill="#1e293b">Split and unwrap</text>
+
+  <!-- list decision -->
+  <polygon points="520,320 670,395 520,470 370,395" fill="#e2e8f0" stroke="#1e293b" stroke-width="3"/>
+  <text x="520" y="388" text-anchor="middle" font-size="20" font-weight="600" fill="#1e293b">Every piece on</text>
+  <text x="520" y="414" text-anchor="middle" font-size="20" font-weight="600" fill="#1e293b">the read-only list?</text>
+  <text x="724" y="382" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">yes</text>
+  <text x="336" y="382" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">no</text>
+
+  <!-- runs, evidence -->
+  <rect x="780" y="355" width="380" height="75" rx="14" fill="#dcfce7" stroke="#15803d" stroke-width="3"/>
+  <text x="970" y="387" text-anchor="middle" font-size="22" fill="#15803d" font-weight="600">Runs. Output becomes</text>
+  <text x="970" y="415" text-anchor="middle" font-size="22" fill="#15803d" font-weight="600">evidence</text>
+
+  <!-- blocked -->
+  <rect x="40" y="355" width="260" height="75" rx="14" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/>
+  <text x="170" y="387" text-anchor="middle" font-size="22" fill="#b91c1c" font-weight="600">Blocked: exit 2,</text>
+  <text x="170" y="415" text-anchor="middle" font-size="22" fill="#b91c1c" font-weight="600">reason shown</text>
+
+  <!-- report -->
+  <rect x="340" y="500" width="360" height="60" rx="14" fill="#e2e8f0" stroke="#1e293b" stroke-width="3"/>
+  <text x="520" y="537" text-anchor="middle" font-size="21" fill="#1e293b">Report: findings + each command</text>
+
+  <!-- you decide -->
+  <rect x="400" y="596" width="240" height="56" rx="28" fill="#1e293b"/>
+  <text x="520" y="632" text-anchor="middle" font-size="24" font-weight="700" fill="#f8fafc">You decide</text>
+</svg>
